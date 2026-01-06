@@ -1,18 +1,23 @@
+---
+layout: none
+title: Saving Zebra Swallowtails
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Saving Swallowtails</title>
+  <title>Saving Zebra Swallowtails</title>
 
   <style>
     :root {
-      --primary: #4CAF50;      /* Lighter Leaf Green */
-      --dark-gray: #2F2F2F;
+      --primary: #66BB6A;      /* Pawpaw Leaf Green */
+      --dark-gray: #2E2E2E;
       --light-gray: #E0E0E0;
-      --soft-gray: #F5F9F6;
+      --soft-gray: #F4F8F4;
       --white: #FFFFFF;
-      --accent: #C8E6C9;       /* Soft pastel green */
+      --accent: #C5E1A5;       /* Soft pawpaw accent */
     }
 
     body {
@@ -45,7 +50,6 @@
 
     .logo-title img {
       height: 50px;
-      width: auto;
     }
 
     nav a {
@@ -65,31 +69,23 @@
       background: var(--white);
     }
 
-    .hero-logo {
-      width: 320px;
-      max-width: 90%;
-      margin-bottom: 1.5rem;
-      user-select: none;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-    }
-
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       color: var(--primary);
       margin-bottom: 1rem;
     }
 
     .subtitle {
       font-size: 1.2rem;
-      color: var(--dark-gray);
+      max-width: 700px;
+      margin: auto;
     }
 
     .sections {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
-      flex: 1;
     }
 
     .card {
@@ -99,11 +95,6 @@
       border: 1px solid var(--light-gray);
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
     }
 
     .card h3 {
@@ -111,28 +102,22 @@
       margin-bottom: 1rem;
     }
 
-    .btn {
-      background: var(--primary);
-      color: var(--white);
-      padding: 0.6rem 1.2rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background: #388E3C;
-    }
-
-    .cta {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: var(--accent);
+    .map-section {
+      background: var(--white);
       margin: 2rem;
+      padding: 2.5rem;
       border-radius: 10px;
-      color: var(--dark-gray);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border: 2px dashed var(--accent);
+      text-align: center;
+    }
+
+    .map-placeholder {
+      margin-top: 1rem;
+      padding: 3rem;
+      background: var(--soft-gray);
+      border-radius: 8px;
+      color: #666;
+      font-style: italic;
     }
 
     footer {
@@ -151,81 +136,77 @@
       nav {
         margin-top: 0.5rem;
       }
-
-      nav a {
-        margin: 0.5rem;
-      }
-
-      .hero-logo {
-        width: 90%;
-      }
-
-      .sections {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <a href="./" class="logo-title">
-      <img src="images/logo.png" alt="Saving Swallowtails Logo">
-      <h1>Saving Swallowtails</h1>
-    </a>
 
-    <nav>
-      <a href="./">Home</a>
-      <a href="about/">About</a>
-      <a href="learn/">Learn</a>
-      <a href="get-involved/">Get Involved</a>
-    </nav>
-  </header>
+<header>
+  <a href="./" class="logo-title">
+    <img src="images/logo.png" alt="Zebra Swallowtail">
+    <h1>Saving Zebra Swallowtails</h1>
+  </a>
 
-  <section class="hero">
-    <img src="images/logo.png" class="hero-logo" alt="Swallowtail Butterfly">
-    <h2>Saving Swallowtails</h2>
-    <p class="subtitle">Protecting Habitat • Educating Communities • Supporting Pollinators</p>
-    <p>Dedicated to the conservation of swallowtail butterflies and their ecosystems.</p>
-  </section>
+  <nav>
+    <a href="./">Home</a>
+    <a href="#zebra">Zebra Swallowtails</a>
+    <a href="#pawpaw">Pawpaws</a>
+    <a href="#map">Map</a>
+  </nav>
+</header>
 
-  <section class="sections">
+<section class="hero">
+  <h2>Zebra Swallowtails & Pawpaw Forests</h2>
+  <p class="subtitle">
+    Zebra swallowtail butterflies depend entirely on native pawpaw trees.
+    Protecting one means protecting the other.
+  </p>
+</section>
 
-    <div class="card">
-      <h3>Why Swallowtails Matter</h3>
-      <p>Learn how swallowtail butterflies support biodiversity and healthy ecosystems.</p>
-      <a href="learn/" class="btn">Learn More</a>
-    </div>
+<section class="sections">
 
-    <div class="card">
-      <h3>Habitat Restoration</h3>
-      <p>Discover how native plants and gardens help swallowtail populations thrive.</p>
-      <a href="habitat/" class="btn">View Projects</a>
-    </div>
+  <div class="card" id="zebra">
+    <h3>Zebra Swallowtails</h3>
+    <p>
+      The zebra swallowtail (<em>Eurytides marcellus</em>) is a specialist species
+      whose caterpillars feed only on pawpaw leaves.
+    </p>
+  </div>
 
-    <div class="card">
-      <h3>Educational Resources</h3>
-      <p>Guides, posters, and classroom resources for students and educators.</p>
-      <a href="resources/" class="btn">Explore Resources</a>
-    </div>
+  <div class="card" id="pawpaw">
+    <h3>Pawpaw Trees</h3>
+    <p>
+      Pawpaws (<em>Asimina triloba</em>) are North America’s largest native fruit
+      and a keystone plant for zebra swallowtail survival.
+    </p>
+  </div>
 
-    <div class="card">
-      <h3>Get Involved</h3>
-      <p>Volunteer, donate, or start a pollinator garden in your community.</p>
-      <a href="get-involved/" class="btn">Take Action</a>
-    </div>
+  <div class="card">
+    <h3>Why Conservation Matters</h3>
+    <p>
+      Habitat loss and forest fragmentation reduce pawpaw availability,
+      directly impacting zebra swallowtail populations.
+    </p>
+  </div>
 
-  </section>
+</section>
 
-  <section class="cta">
-    <h2>Help Protect Swallowtails</h2>
-    <p>Small actions make a big difference for pollinators.</p>
-    <a href="get-involved/" class="btn">Join the Project</a>
-  </section>
+<section class="map-section" id="map">
+  <h2>Pawpaw & Zebra Swallowtail Habitat Map</h2>
+  <p>
+    This interactive GIS map will display known pawpaw stands, sightings,
+    and conservation areas.
+  </p>
 
-  <footer>
-    <p>&copy; 2026 Saving Swallowtails Project. All rights reserved.</p>
-  </footer>
+  <div class="map-placeholder">
+    GIS map coming soon — data collection and mapping in progress.
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Saving Zebra Swallowtails Project</p>
+</footer>
 
 </body>
 </html>
