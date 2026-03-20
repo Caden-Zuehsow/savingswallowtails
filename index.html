@@ -13,7 +13,6 @@
   --text-dark: #1f1f1f;
 }
 
-/* Base */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -49,69 +48,35 @@ nav a {
   font-weight: bold;
 }
 
-/* Title Section */
+/* Hero */
 .hero {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: var(--primary);
-  margin-bottom: 0.5rem;
 }
 
-.hero p {
-  max-width: 800px;
-  margin: auto;
-}
-
-/* Poster Layout */
-.poster {
+/* Sections */
+.sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 2rem;
+  gap: 1.5rem;
 }
 
-/* Section Blocks */
-.block {
+.card {
   background: var(--card);
   color: var(--text-dark);
   padding: 1.5rem;
   border-radius: 8px;
-}
-
-.block h2 {
-  color: var(--primary);
-  margin-top: 0;
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 0.3rem;
-}
-
-/* Wide Sections */
-.block.full {
-  grid-column: span 2;
-}
-
-/* Repository Box */
-.repo {
   text-align: center;
 }
 
-.repo a {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background: var(--primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.repo a:hover {
-  background: #1c7d10;
+.card h3 {
+  color: var(--primary);
 }
 
 /* Footer */
@@ -119,7 +84,6 @@ footer {
   text-align: center;
   padding: 1rem;
   background: var(--primary);
-  margin-top: 2rem;
 }
 </style>
 </head>
@@ -127,84 +91,56 @@ footer {
 <body>
 
 <header>
-  <a href="./" class="logo-title">
+  <a href="index.html" class="logo-title">
     <img src="Templogo.png">
-    <h2>Saving Zebra Swallowtails</h2>
+    <h2>Saving Swallowtails</h2>
   </a>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#repo">Repository</a>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="people.html">People</a>
+    <a href="social.html">Social</a>
+    <a href="python.html">Python</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Bridging Fragmented Habitat</h1>
+  <h1>Protecting Zebra Swallowtails</h1>
   <p>
-    Modeled connectivity zones predict zebra swallowtail occurrence by linking
-    riparian habitats and pawpaw host plant distributions.
+    A nonprofit initiative focused on conserving zebra swallowtail butterflies
+    through habitat modeling, research, and public engagement.
   </p>
 </section>
 
-<section class="poster">
+<section class="sections">
 
-  <div class="block">
-    <h2>Introduction</h2>
+  <div class="card">
+    <h3>Our Mission</h3>
     <p>
-      Habitat fragmentation separates critical resources for specialist species.
-      Zebra swallowtails rely exclusively on pawpaw trees, which are often found
-      in riparian habitats.
+      We work to preserve zebra swallowtail populations by understanding and
+      restoring habitat connectivity.
     </p>
   </div>
 
-  <div class="block">
-    <h2>Objective</h2>
+  <div class="card">
+    <h3>Research</h3>
     <p>
-      Develop and evaluate a connectivity model based on riparian zones and
-      pawpaw distribution to predict zebra swallowtail occurrence.
+      Using GIS and ecological modeling, we identify critical habitat corridors.
     </p>
   </div>
 
-  <div class="block full">
-    <h2>Methods</h2>
+  <div class="card">
+    <h3>Get Involved</h3>
     <p>
-      Observation data from iNaturalist was combined with river datasets and
-      converted into raster layers. A resistance surface and least-cost path
-      analysis were used to model movement corridors between habitat patches.
+      Follow our work, contribute data, or help expand conservation efforts.
     </p>
-  </div>
-
-  <div class="block">
-    <h2>Results</h2>
-    <p>
-      Observations occurred significantly closer to modeled connectivity zones,
-      supporting the effectiveness of the model.
-    </p>
-  </div>
-
-  <div class="block">
-    <h2>Discussion</h2>
-    <p>
-      Connectivity between riparian zones plays a key role in zebra swallowtail
-      distribution and could guide conservation efforts.
-    </p>
-  </div>
-
-  <div class="block full repo" id="repo">
-    <h2>Project Repository</h2>
-    <p>
-      Access the full GIS model, data, and analysis code used in this project.
-    </p>
-
-    <a href="https://github.com/Caden-Zuehsow/zebra-swallowtail-corridors" target="_blank">
-      View Repository →
-    </a>
   </div>
 
 </section>
 
 <footer>
-  <p>&copy; 2026 Saving Zebra Swallowtails Project</p>
+  <p>&copy; 2026 Saving Zebra Swallowtails</p>
 </footer>
 
 </body>
