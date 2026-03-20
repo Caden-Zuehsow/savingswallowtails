@@ -1,228 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Saving Zebra Swallowtails</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saving Swallowtails</title>
 
-  <style>
-    :root {
-      --primary: #25A313;      /* Pawpaw Leaf Green */
-      --dark-gray: #2E2E2E;
-      --light-gray: #E0E0E0;
-      --soft-gray: #F4F8F4;
-      --white: #FFFFFF;
-      --accent: #C5E1A5;
-    }
+<style>
+:root {
+  --primary: #25A313;
+  --bg: #0b0b0b;
+  --card: #ffffff;
+  --text-dark: #1f1f1f;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f; /* black background */
-      color: #eaeaea;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+/* Base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: white;
+}
 
-    header {
-      background: var(--primary);
-      color: var(--white);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+/* Header */
+header {
+  background: var(--primary);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--white);
-      text-decoration: none;
-    }
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: white;
+  text-decoration: none;
+}
 
-    .logo-title img {
-      height: 50px;
-    }
+.logo-title img {
+  height: 50px;
+}
 
-    nav a {
-      margin-left: 1rem;
-      color: var(--white);
-      font-weight: bold;
-      text-decoration: none;
-    }
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    nav a:hover {
-      color: var(--accent);
-    }
+/* Title Section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: var(--white);
-      color: var(--dark-gray);
-    }
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
 
-    .hero h2 {
-      font-size: 2.6rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
+.hero p {
+  max-width: 800px;
+  margin: auto;
+}
 
-    .subtitle {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
+/* Poster Layout */
+.poster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
 
-    .sections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
+/* Section Blocks */
+.block {
+  background: var(--card);
+  color: var(--text-dark);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
 
-    .card {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 2rem;
-      border: 1px solid var(--light-gray);
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-      color: var(--dark-gray);
-    }
+.block h2 {
+  color: var(--primary);
+  margin-top: 0;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.3rem;
+}
 
-    .card h3 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
+/* Wide Sections */
+.block.full {
+  grid-column: span 2;
+}
 
-    .map-section {
-      background: var(--white);
-      margin: 2rem;
-      padding: 2.5rem;
-      border-radius: 10px;
-      border: 2px dashed var(--accent);
-      text-align: center;
-      color: var(--dark-gray);
-    }
+/* Repository Box */
+.repo {
+  text-align: center;
+}
 
-    .map-placeholder {
-      margin-top: 1rem;
-      padding: 2rem;
-      background: #f0f0f0;
-      border-radius: 8px;
-    }
+.repo a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
 
-    .repo-link {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background: var(--primary);
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s;
-    }
+.repo a:hover {
+  background: #1c7d10;
+}
 
-    .repo-link:hover {
-      background: #1e7f10;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: var(--primary);
-      color: var(--white);
-      margin-top: auto;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-      }
-
-      nav {
-        margin-top: 0.5rem;
-      }
-    }
-  </style>
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  margin-top: 2rem;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <a href="./" class="logo-title">
-    <img src="Templogo.png" alt="Zebra Swallowtail">
-    <h1>Saving Zebra Swallowtails</h1>
+    <img src="Templogo.png">
+    <h2>Saving Zebra Swallowtails</h2>
   </a>
 
   <nav>
-    <a href="./">Home</a>
-    <a href="#zebra">Zebra Swallowtails</a>
-    <a href="#pawpaw">Pawpaws</a>
-    <a href="#map">Repository</a>
+    <a href="#">Home</a>
+    <a href="#repo">Repository</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h2>Zebra Swallowtails & Pawpaw Forests</h2>
-  <p class="subtitle">
-    Zebra swallowtail butterflies depend entirely on native pawpaw trees.
-    Protecting one means protecting the other.
-  </p>
-</section>
-
-<section class="sections">
-
-  <div class="card" id="zebra">
-    <h3>Zebra Swallowtails</h3>
-    <p>
-      The zebra swallowtail (<em>Eurytides marcellus</em>) is a specialist species
-      whose caterpillars feed only on pawpaw leaves.
-    </p>
-  </div>
-
-  <div class="card" id="pawpaw">
-    <h3>Pawpaw Trees</h3>
-    <p>
-      Pawpaws (<em>Asimina triloba</em>) are North America’s largest native fruit
-      and the sole host plant for zebra swallowtails.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Why Conservation Matters</h3>
-    <p>
-      Habitat loss and forest fragmentation reduce pawpaw availability,
-      directly impacting zebra swallowtail populations.
-    </p>
-  </div>
-
-</section>
-
-<section class="map-section" id="map">
-  <h2>Project Repository</h2>
+  <h1>Bridging Fragmented Habitat</h1>
   <p>
-    Explore the full dataset, GIS analysis, and modeling code used in this project.
+    Modeled connectivity zones predict zebra swallowtail occurrence by linking
+    riparian habitats and pawpaw host plant distributions.
   </p>
+</section>
 
-  <div class="map-placeholder">
-    <a 
-      href="https://github.com/Caden-Zuehsow/zebra-swallowtail-corridors" 
-      target="_blank" 
-      class="repo-link">
-      View the Zebra Swallowtail Corridors Repository →
+<section class="poster">
+
+  <div class="block">
+    <h2>Introduction</h2>
+    <p>
+      Habitat fragmentation separates critical resources for specialist species.
+      Zebra swallowtails rely exclusively on pawpaw trees, which are often found
+      in riparian habitats.
+    </p>
+  </div>
+
+  <div class="block">
+    <h2>Objective</h2>
+    <p>
+      Develop and evaluate a connectivity model based on riparian zones and
+      pawpaw distribution to predict zebra swallowtail occurrence.
+    </p>
+  </div>
+
+  <div class="block full">
+    <h2>Methods</h2>
+    <p>
+      Observation data from iNaturalist was combined with river datasets and
+      converted into raster layers. A resistance surface and least-cost path
+      analysis were used to model movement corridors between habitat patches.
+    </p>
+  </div>
+
+  <div class="block">
+    <h2>Results</h2>
+    <p>
+      Observations occurred significantly closer to modeled connectivity zones,
+      supporting the effectiveness of the model.
+    </p>
+  </div>
+
+  <div class="block">
+    <h2>Discussion</h2>
+    <p>
+      Connectivity between riparian zones plays a key role in zebra swallowtail
+      distribution and could guide conservation efforts.
+    </p>
+  </div>
+
+  <div class="block full repo" id="repo">
+    <h2>Project Repository</h2>
+    <p>
+      Access the full GIS model, data, and analysis code used in this project.
+    </p>
+
+    <a href="https://github.com/Caden-Zuehsow/zebra-swallowtail-corridors" target="_blank">
+      View Repository →
     </a>
   </div>
+
 </section>
 
 <footer>
   <p>&copy; 2026 Saving Zebra Swallowtails Project</p>
 </footer>
 
+</body>
+</html>
 </body>
 </html>
