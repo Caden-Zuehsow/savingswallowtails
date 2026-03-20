@@ -13,6 +13,7 @@
   --text-dark: #1f1f1f;
 }
 
+/* Base */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -55,28 +56,63 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: var(--primary);
+  margin-bottom: 1rem;
 }
 
-/* Sections */
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+/* Layout */
 .sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+  padding: 2rem;
 }
 
-.card {
+/* Card Blocks */
+.block {
   background: var(--card);
   color: var(--text-dark);
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.card h3 {
-  color: var(--primary); /* GREEN HEADERS */
+/* GREEN HEADER BAR */
+.block h2 {
+  background: var(--primary);
+  color: white;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+}
+
+/* Content inside block */
+.block p {
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #1c7d10;
 }
 
 /* Footer */
@@ -84,6 +120,7 @@ footer {
   text-align: center;
   padding: 1rem;
   background: var(--primary);
+  margin-top: 2rem;
 }
 </style>
 </head>
@@ -108,32 +145,53 @@ footer {
 <section class="hero">
   <h1>Protecting Swallowtail Butterflies</h1>
   <p>
-    A nonprofit focused on conserving swallowtail species through habitat research,
-    ecological modeling, and public engagement.
+    Saving Swallowtails is a nonprofit focused on conservation through habitat modeling,
+    ecological research, and community-driven data collection.
   </p>
 </section>
 
 <section class="sections">
 
-  <div class="card">
-    <h3>Our Mission</h3>
+  <div class="block">
+    <h2>Our Mission</h2>
     <p>
-      We work to preserve swallowtail populations by understanding and restoring habitat connectivity.
+      We aim to preserve swallowtail butterfly populations by identifying and restoring
+      critical habitat corridors across fragmented landscapes.
     </p>
   </div>
 
-  <div class="card">
-    <h3>Research</h3>
+  <div class="block">
+    <h2>Research</h2>
     <p>
-      GIS-based modeling identifies key habitat corridors and conservation priorities.
+      Our work uses GIS, ecological modeling, and public datasets to understand how
+      habitat connectivity influences species distribution.
     </p>
+    <a href="/research/" class="button">View Research</a>
   </div>
 
-  <div class="card">
-    <h3>Get Involved</h3>
+  <div class="block">
+    <h2>People</h2>
     <p>
-      Follow our work, contribute observations, and support conservation efforts.
+      Meet the researchers and contributors working to better understand and protect
+      swallowtail populations.
     </p>
+    <a href="/people/" class="button">Meet the Team</a>
+  </div>
+
+  <div class="block">
+    <h2>Social & Outreach</h2>
+    <p>
+      Follow our work, contribute observations, and stay updated on conservation efforts.
+    </p>
+    <a href="/social/" class="button">Get Involved</a>
+  </div>
+
+  <div class="block">
+    <h2>Python & Data</h2>
+    <p>
+      Explore the code, datasets, and modeling tools used in our research.
+    </p>
+    <a href="/python/" class="button">View Code</a>
   </div>
 
 </section>
@@ -142,5 +200,7 @@ footer {
   <p>&copy; 2026 Saving Swallowtails</p>
 </footer>
 
+</body>
+</html>
 </body>
 </html>
