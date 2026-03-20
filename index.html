@@ -12,14 +12,14 @@
       --light-gray: #E0E0E0;
       --soft-gray: #F4F8F4;
       --white: #FFFFFF;
-      --accent: #C5E1A5;       /* Soft pawpaw accent */
+      --accent: #C5E1A5;
     }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--soft-gray);
-      color: var(--dark-gray);
+      background: #0f0f0f; /* black background */
+      color: #eaeaea;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -62,6 +62,7 @@
       text-align: center;
       padding: 4rem 2rem;
       background: var(--white);
+      color: var(--dark-gray);
     }
 
     .hero h2 {
@@ -89,7 +90,8 @@
       padding: 2rem;
       border: 1px solid var(--light-gray);
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      color: var(--dark-gray);
     }
 
     .card h3 {
@@ -104,15 +106,30 @@
       border-radius: 10px;
       border: 2px dashed var(--accent);
       text-align: center;
+      color: var(--dark-gray);
     }
 
     .map-placeholder {
       margin-top: 1rem;
-      padding: 3rem;
-      background: var(--soft-gray);
+      padding: 2rem;
+      background: #f0f0f0;
       border-radius: 8px;
-      color: #666;
-      font-style: italic;
+    }
+
+    .repo-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .repo-link:hover {
+      background: #1e7f10;
     }
 
     footer {
@@ -147,7 +164,7 @@
     <a href="./">Home</a>
     <a href="#zebra">Zebra Swallowtails</a>
     <a href="#pawpaw">Pawpaws</a>
-    <a href="#map">Map</a>
+    <a href="#map">Repository</a>
   </nav>
 </header>
 
@@ -188,14 +205,18 @@
 </section>
 
 <section class="map-section" id="map">
-  <h2>Pawpaw & Zebra Swallowtail Habitat Map</h2>
+  <h2>Project Repository</h2>
   <p>
-    This interactive GIS map will display known pawpaw stands, sightings,
-    and conservation areas.
+    Explore the full dataset, GIS analysis, and modeling code used in this project.
   </p>
 
   <div class="map-placeholder">
-    GIS map coming soon — data collection and mapping in progress.
+    <a 
+      href="https://github.com/Caden-Zuehsow/zebra-swallowtail-corridors" 
+      target="_blank" 
+      class="repo-link">
+      View the Zebra Swallowtail Corridors Repository →
+    </a>
   </div>
 </section>
 
