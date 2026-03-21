@@ -9,10 +9,10 @@
 <style>
 :root {
   --primary: #25A313;
-  --primary-dark: #1c7d10;
   --bg: #141414;
   --card: #ffffff;
   --text-dark: #1f1f1f;
+  --muted: #666;
 }
 
 /* Base */
@@ -58,75 +58,71 @@ nav a {
 .main {
   flex: 1;
   padding: 3rem 1rem;
-  text-align: center;
 }
 
 .main h1 {
+  text-align: center;
   color: var(--primary);
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
-  letter-spacing: 0.5px;
 }
 
-/* People Cards */
+/* People List */
 .people-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
   max-width: 800px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
+/* Card */
 .person {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  border-radius: 14px;
-  padding: 1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.person:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 8px;
 }
 
 .person-inner {
   display: flex;
   align-items: center;
+  background: var(--card);
+  border-radius: 8px;
+  padding: 1rem;
   gap: 1.25rem;
 }
 
 /* Image */
 .person img {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 3px solid rgba(255,255,255,0.8);
-  background: white;
+  border-radius: 6px;
+  flex-shrink: 0;
 }
 
-/* Text box */
+/* Text */
 .person-text {
-  background: var(--card);
-  color: var(--text-dark);
-  padding: 1.2rem 1.4rem;
-  border-radius: 10px;
-  flex: 1;
   text-align: left;
 }
 
 .person-text h2 {
   margin: 0;
-  font-size: 1.5rem;
-  letter-spacing: 0.3px;
+  font-size: 1.4rem;
+  color: var(--text-dark);
 }
 
-.person-text p {
-  margin: 0.4rem 0 0;
-  font-weight: 600;
+.person-text .title {
+  margin-top: 2px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Contact */
+.person-text .contact {
+  margin-top: 6px;
+  font-size: 0.9rem;
   color: var(--primary);
-  font-size: 1rem;
 }
 
 /* Footer */
@@ -165,7 +161,11 @@ footer {
         <img src="/templogo.png">
         <div class="person-text">
           <h2>Caden Zuehsow</h2>
-          <p>Founder</p>
+          <div class="title">Founder</div>
+          <div class="contact">
+            260-573-7888<br>
+            ctzuehsow@gmail.com
+          </div>
         </div>
       </div>
     </div>
@@ -175,7 +175,7 @@ footer {
         <img src="/templogo.png">
         <div class="person-text">
           <h2>Josiah Thurman</h2>
-          <p>Founder</p>
+          <div class="title">Founder</div>
         </div>
       </div>
     </div>
@@ -185,7 +185,7 @@ footer {
         <img src="/templogo.png">
         <div class="person-text">
           <h2>Esteban Coria</h2>
-          <p>Founder</p>
+          <div class="title">Founder</div>
         </div>
       </div>
     </div>
@@ -195,7 +195,7 @@ footer {
         <img src="/templogo.png">
         <div class="person-text">
           <h2>Mahlan Dirksen</h2>
-          <p>Media Coordinator</p>
+          <div class="title">Media Coordinator</div>
         </div>
       </div>
     </div>
@@ -207,5 +207,7 @@ footer {
   <p>&copy; 2026 Saving Swallowtails</p>
 </footer>
 
+</body>
+</html>
 </body>
 </html>
