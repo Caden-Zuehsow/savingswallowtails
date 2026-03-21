@@ -50,6 +50,7 @@ nav a {
   font-weight: bold;
 }
 
+/* Hero */
 .hero {
   position: relative;
   text-align: center;
@@ -85,12 +86,12 @@ nav a {
 /* Layout */
 .sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
 }
 
-/* Card Blocks */
+/* Blocks */
 .block {
   background: var(--card);
   color: var(--text-dark);
@@ -107,11 +108,28 @@ nav a {
   font-size: 1.2rem;
 }
 
-.block p {
+.block p, .block ul {
   padding: 1rem;
   margin: 0;
 }
 
+/* README styling */
+.readme h3 {
+  color: var(--primary);
+  margin: 1rem;
+}
+
+.readme code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.readme ul {
+  padding-left: 2rem;
+}
+
+/* Button */
 .button {
   display: inline-block;
   margin: 1rem;
@@ -127,6 +145,7 @@ nav a {
   background: #1c7d10;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -149,6 +168,7 @@ footer {
     <a href="/research/">Research</a>
     <a href="/people/">People</a>
     <a href="/social/">Social</a>
+    <a href="/get-involved/">Get Involved</a>
   </nav>
 </header>
 
@@ -161,6 +181,7 @@ footer {
 
 <section class="sections">
 
+  <!-- OUR MISSION -->
   <div class="block">
     <h2>Our Mission</h2>
     <p>
@@ -169,12 +190,47 @@ footer {
     </p>
   </div>
 
-  <div class="block">
+  <!-- PYTHON + README PREVIEW -->
+  <div class="block readme">
     <h2>Python & Data</h2>
+
+    <h3>Zebra Swallowtail Corridor Modeling</h3>
     <p>
-      Explore the code, datasets, and modeling tools used in our research.
+      This project models potential movement corridors for Zebra Swallowtail butterflies based on:
     </p>
-    <a href="/python/" class="button">View Code</a>
+
+    <ul>
+      <li>Pawpaw (<em>Asimina triloba</em>) host plant distribution</li>
+      <li>Riparian / river navigation corridors</li>
+      <li>Landscape resistance (land cover)</li>
+    </ul>
+
+    <h3>Hypothesis</h3>
+    <p>
+      Zebra swallowtails use a combination of pawpaw groves and riparian zones as navigation corridors,
+      structuring population connectivity and distribution.
+    </p>
+
+    <h3>Outputs</h3>
+    <ul>
+      <li><code>resistance.tif</code> — movement cost surface</li>
+      <li><code>corridors.tif</code> — corridor intensity raster</li>
+      <li><code>corridors.shp</code> — vectorized corridor polygons</li>
+    </ul>
+
+    <h3>Requirements</h3>
+    <p><code>pip install -r requirements.txt</code></p>
+
+    <h3>To Run</h3>
+    <ul>
+      <li><code>download_prep_data.py</code></li>
+      <li><code>zebra_corridors.py</code></li>
+      <li><code>validate_corridors.py</code></li>
+    </ul>
+
+    <a href="https://github.com/Caden-Zuehsow/zebra-swallowtail-corridors" target="_blank" class="button">
+      View Full Repository →
+    </a>
   </div>
 
 </section>
@@ -183,7 +239,5 @@ footer {
   <p>&copy; 2026 Saving Swallowtails</p>
 </footer>
 
-</body>
-</html>
 </body>
 </html>
