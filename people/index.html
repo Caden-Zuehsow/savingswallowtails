@@ -9,6 +9,7 @@
 <style>
 :root {
   --primary: #25A313;
+  --primary-dark: #1c7d10;
   --bg: #141414;
   --card: #ffffff;
   --text-dark: #1f1f1f;
@@ -63,60 +64,69 @@ nav a {
 .main h1 {
   color: var(--primary);
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
 }
 
 /* People Cards */
 .people-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 750px;
+  gap: 1.75rem;
+  max-width: 800px;
   margin: auto;
 }
 
 .person {
-  background: var(--primary);
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 14px;
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.person:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
 }
 
 .person-inner {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 /* Image */
 .person img {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  border: 3px solid rgba(255,255,255,0.8);
   background: white;
-  padding: 5px;
 }
 
-/* Text box (only white part) */
+/* Text box */
 .person-text {
   background: var(--card);
   color: var(--text-dark);
-  padding: 1rem;
-  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  border-radius: 10px;
   flex: 1;
   text-align: left;
 }
 
 .person-text h2 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.3px;
 }
 
 .person-text p {
-  margin: 0.5rem 0 0;
-  font-weight: bold;
+  margin: 0.4rem 0 0;
+  font-weight: 600;
   color: var(--primary);
+  font-size: 1rem;
 }
 
 /* Footer */
