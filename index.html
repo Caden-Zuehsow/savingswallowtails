@@ -42,18 +42,7 @@ header {
 .logo-title img {
   height: 50px;
 }
-/* Mission block = featured section */
-.mission {
-  text-align: center;
-}
 
-.mission p {
-  font-size: 1.4rem;
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-  line-height: 1.6;
-}
 nav a {
   color: white;
   margin-left: 1rem;
@@ -96,10 +85,26 @@ nav a {
 
 /* Layout */
 .sections {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
   padding: 2rem;
+}
+
+/* MISSION (no box, big text) */
+.mission {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.mission h2 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.mission p {
+  font-size: 1.3rem;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
 }
 
 /* Blocks */
@@ -109,6 +114,7 @@ nav a {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-top: 2rem;
 }
 
 .block h2 {
@@ -140,6 +146,32 @@ nav a {
   padding-left: 2rem;
 }
 
+/* Sponsors */
+.sponsors {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.sponsors h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sponsor-logos img {
+  height: 80px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
 /* Button */
 .button {
   display: inline-block;
@@ -154,9 +186,6 @@ nav a {
 
 .button:hover {
   background: #1c7d10;
-}
-  .block.full {
-  grid-column: 1 / -1;
 }
 
 /* Footer */
@@ -184,7 +213,6 @@ footer {
     <a href="/social/">Social</a>
     <a href="/get-involved/">Get Involved</a>
   </nav>
-  
 </header>
 
 <section class="hero">
@@ -196,8 +224,8 @@ footer {
 
 <section class="sections">
 
-  <!-- OUR MISSION -->
-  <div class="block full mission">
+  <!-- MISSION (NO BOX) -->
+  <div class="mission">
     <h2>Our Mission</h2>
     <p>
       We aim to preserve swallowtail butterfly populations by identifying and restoring
@@ -205,8 +233,8 @@ footer {
     </p>
   </div>
 
-  <!-- PYTHON + README PREVIEW -->
-  <div class="block readme full">
+  <!-- PYTHON -->
+  <div class="block readme">
     <h2>Python & Data</h2>
 
     <h3>Zebra Swallowtail Corridor Modeling</h3>
@@ -248,11 +276,23 @@ footer {
     </a>
   </div>
 
+  <!-- SPONSORS -->
+  <div class="sponsors">
+    <h2>Thanks to Our Sponsors</h2>
+
+    <div class="sponsor-logos">
+      <img src="/Templogo.png" alt="Sponsor 1">
+      <img src="/Templogo.png" alt="Sponsor 2">
+    </div>
+  </div>
+
 </section>
 
 <footer>
   <p>&copy; 2026 Saving Swallowtails</p>
 </footer>
 
+</body>
+</html>
 </body>
 </html>
