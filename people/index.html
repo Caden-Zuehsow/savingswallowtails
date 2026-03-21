@@ -71,42 +71,46 @@ nav a {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 700px;
+  max-width: 750px;
   margin: auto;
 }
 
 .person {
   background: var(--primary);
   border-radius: 12px;
-  padding: 8px;
+  padding: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .person-inner {
   display: flex;
   align-items: center;
-  background: var(--card);
-  border-radius: 10px;
-  overflow: hidden;
+  gap: 1rem;
 }
 
 /* Image */
 .person img {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
+  border-radius: 8px;
+  background: white;
+  padding: 5px;
 }
 
-/* Text */
+/* Text box (only white part) */
 .person-text {
+  background: var(--card);
+  color: var(--text-dark);
   padding: 1rem;
+  border-radius: 8px;
+  flex: 1;
   text-align: left;
 }
 
 .person-text h2 {
   margin: 0;
   font-size: 1.4rem;
-  color: var(--text-dark);
 }
 
 .person-text p {
@@ -141,7 +145,6 @@ footer {
   </nav>
 </header>
 
-<!-- MAIN CONTENT -->
 <div class="main">
   <h1>Our Team</h1>
 
@@ -149,7 +152,7 @@ footer {
 
     <div class="person">
       <div class="person-inner">
-        <img src="/templogo.png" alt="Caden Zuehsow">
+        <img src="/templogo.png">
         <div class="person-text">
           <h2>Caden Zuehsow</h2>
           <p>Founder</p>
@@ -159,7 +162,7 @@ footer {
 
     <div class="person">
       <div class="person-inner">
-        <img src="/templogo.png" alt="Josiah Thurman">
+        <img src="/templogo.png">
         <div class="person-text">
           <h2>Josiah Thurman</h2>
           <p>Founder</p>
@@ -169,7 +172,7 @@ footer {
 
     <div class="person">
       <div class="person-inner">
-        <img src="/templogo.png" alt="Esteban Coria">
+        <img src="/templogo.png">
         <div class="person-text">
           <h2>Esteban Coria</h2>
           <p>Founder</p>
@@ -179,7 +182,7 @@ footer {
 
     <div class="person">
       <div class="person-inner">
-        <img src="/templogo.png" alt="Mahlan Dirksen">
+        <img src="/templogo.png">
         <div class="person-text">
           <h2>Mahlan Dirksen</h2>
           <p>Media Coordinator</p>
